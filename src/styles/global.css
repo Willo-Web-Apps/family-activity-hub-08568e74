@@ -1,62 +1,66 @@
-/* GOOGLE FONTS — Add @import url("https://fonts.googleapis.com/css2?...")
-   lines HERE, ABOVE @import "tailwindcss". CSS spec: every @import must
-   appear before any other rule (incl. @theme, @keyframes). A misplaced
-   @import will fail the build (`@import rules must precede all rules`). */
+/* GOOGLE FONTS — must be first, above all other rules */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 /* -----------------------------------------------------------------------
-   Design Tokens — customize these to change the entire site's look.
-   The Product Agent should edit this @theme block to match the business:
-   - Swap fonts (add Google Fonts @import at the very TOP of this file,
-     then update --font-display / --font-body below)
-   - Change brand colors to match the business personality
-   - Flip surface colors for dark theme (swap light/dark values)
+   Design Tokens — Rallyday
+   Warm family energy: deep blue primary, energetic orange accent,
+   warm cream surface. Saturday morning soccer field meets premium app.
    ----------------------------------------------------------------------- */
 
 @theme {
-  /* Typography — replace with distinctive Google Fonts for the business */
-  --font-display: ui-sans-serif, system-ui, sans-serif;
-  --font-body: ui-sans-serif, system-ui, sans-serif;
+  /* Typography */
+  --font-display: 'IBM Plex Serif', Georgia, serif;
+  --font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
 
-  /* Brand color scale — agent should customize per business */
-  --color-brand-50: oklch(0.97 0.01 250);
-  --color-brand-100: oklch(0.93 0.02 250);
-  --color-brand-200: oklch(0.87 0.04 250);
-  --color-brand-400: oklch(0.70 0.12 250);
-  --color-brand-500: oklch(0.60 0.16 250);
-  --color-brand-600: oklch(0.50 0.16 250);
+  /* Brand: deep confident blue */
+  --color-brand-50:  oklch(0.97 0.015 230);
+  --color-brand-100: oklch(0.93 0.03  230);
+  --color-brand-200: oklch(0.84 0.05  230);
+  --color-brand-400: oklch(0.58 0.09  230);
+  --color-brand-500: oklch(0.42 0.09  230);
+  --color-brand-600: oklch(0.34 0.085 230);
 
-  /* Surface colors — light theme defaults. Flip for dark theme:
-     surface-50 becomes near-black, surface-900 becomes near-white */
-  --color-surface-50: oklch(0.985 0.002 250);
-  --color-surface-100: oklch(0.96 0.004 250);
-  --color-surface-200: oklch(0.92 0.006 250);
-  --color-surface-800: oklch(0.30 0.015 250);
-  --color-surface-900: oklch(0.20 0.015 250);
-  --color-surface-950: oklch(0.14 0.012 250);
+  /* Accent: warm energetic orange */
+  --color-accent-50:  oklch(0.97 0.02  40);
+  --color-accent-100: oklch(0.93 0.05  40);
+  --color-accent-200: oklch(0.87 0.09  40);
+  --color-accent-400: oklch(0.75 0.14  40);
+  --color-accent-500: oklch(0.67 0.16  40);
+  --color-accent-600: oklch(0.57 0.16  40);
+
+  /* Surface: warm cream tones */
+  --color-surface-50:  oklch(0.985 0.008 65);
+  --color-surface-100: oklch(0.97  0.012 65);
+  --color-surface-200: oklch(0.93  0.014 65);
+  --color-surface-800: oklch(0.30  0.018 230);
+  --color-surface-900: oklch(0.22  0.015 230);
+  --color-surface-950: oklch(0.14  0.012 230);
 }
 
-/* Page-load animations — CSS only, no JS required */
+/* Page-load animations — CSS only */
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out both;
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
 }
 
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out both;
-}
+.animate-fade-in  { animation: fadeIn  0.7s ease-out both; }
+.animate-slide-up { animation: slideUp 0.7s ease-out both; }
+.animate-float    { animation: float 5s ease-in-out infinite; }
 
-/* Staggered animation delays for cascading reveals */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
+/* Staggered delays */
+.delay-100 { animation-delay: 0.10s; }
+.delay-200 { animation-delay: 0.20s; }
+.delay-300 { animation-delay: 0.30s; }
+.delay-400 { animation-delay: 0.40s; }
+.delay-500 { animation-delay: 0.50s; }

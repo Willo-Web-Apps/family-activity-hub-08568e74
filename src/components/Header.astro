@@ -1,11 +1,35 @@
 ---
 ---
-<header class="sticky top-0 z-50 border-b border-surface-200 bg-surface-50/80 backdrop-blur-lg">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="text-lg font-bold tracking-tight text-surface-900 font-display">Your New Business</a>
-    <div class="flex items-center gap-6">
-      <a href="/blog" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors">Blog</a>
-      <a href="#cta" class="text-sm font-semibold bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors">Get Started</a>
+<header class="sticky top-0 z-50 border-b" style="border-color: oklch(0.93 0.014 65 / 0.8); background: oklch(0.985 0.008 65 / 0.85); backdrop-filter: blur(16px) saturate(1.2);">
+  <nav class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10 h-16 flex items-center justify-between gap-6">
+
+    <!-- Logo mark + wordmark -->
+    <a href="/" class="flex items-center gap-2.5 group">
+      <!-- Simple logomark: an "R" in an orange circle -->
+      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-105"
+        style="background: oklch(0.67 0.16 40);">
+        <svg class="w-4 h-4 text-white" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M3 2h6c2.2 0 4 1.8 4 4s-1.8 4-4 4H5l4 4H7L3 10V2Zm2 2v4h4c1.1 0 2-.9 2-2s-.9-2-2-2H5Z"/>
+        </svg>
+      </div>
+      <span class="font-display text-lg font-700 tracking-tight" style="color: oklch(0.22 0.015 230);">Rallyday</span>
+    </a>
+
+    <!-- Nav links (desktop) -->
+    <div class="hidden sm:flex items-center gap-7">
+      <a href="#how-it-works" class="font-body text-sm font-500 transition-colors duration-150 hover:opacity-100"
+        style="color: oklch(0.42 0.025 230);">How it works</a>
+      <a href="#join" class="font-body text-sm font-500 transition-colors duration-150 hover:opacity-100"
+        style="color: oklch(0.42 0.025 230);">For families</a>
     </div>
+
+    <!-- CTA -->
+    <a href="#join"
+      class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl font-body font-semibold text-sm text-white transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
+      style="background: oklch(0.67 0.16 40); box-shadow: 0 2px 10px oklch(0.67 0.16 40 / 0.28);">
+      Get early access
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+    </a>
+
   </nav>
 </header>

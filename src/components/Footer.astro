@@ -1,11 +1,33 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+<footer class="border-t py-12" style="border-color: oklch(0.93 0.014 65); background: oklch(0.985 0.008 65);">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+
+      <!-- Brand -->
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+          style="background: oklch(0.67 0.16 40);">
+          <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M3 2h6c2.2 0 4 1.8 4 4s-1.8 4-4 4H5l4 4H7L3 10V2Zm2 2v4h4c1.1 0 2-.9 2-2s-.9-2-2-2H5Z"/>
+          </svg>
+        </div>
+        <span class="font-display text-base font-700" style="color: oklch(0.22 0.015 230);">Rallyday</span>
+        <span class="font-body text-sm" style="color: oklch(0.55 0.025 230);">— Every activity, every kid, one place.</span>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-wrap gap-6 text-sm font-body" style="color: oklch(0.50 0.025 230);">
+        <a href="#how-it-works" class="hover:opacity-80 transition-opacity">How it works</a>
+        <a href="#join" class="hover:opacity-80 transition-opacity">Join waitlist</a>
+        <a href="mailto:hello@rallyday.app" class="hover:opacity-80 transition-opacity">hello@rallyday.app</a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-sm font-body" style="color: oklch(0.60 0.020 230);">
+        &copy; {year} Rallyday. Made by parents, for parents.
+      </p>
     </div>
   </div>
 </footer>
